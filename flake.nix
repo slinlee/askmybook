@@ -4,16 +4,18 @@
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
   outputs = { self, nixpkgs, flake-utils }:
-    flake-utils.lib.eachDefaultSystem (system: let
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      devShells.default = pkgs.mkShell {
-        packages = [ 
-         pkgs.bashInteractive
-         pkgs.python310Packages.pip
-         pkgs.postgresql
-         pkgs.heroku
-        ];
-      };
-    });
+    flake-utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+      in
+      {
+        devShells.default = pkgs.mkShell {
+          packages = [
+            pkgs.bashInteractive
+            pkgs.python310Packages.pip
+            pkgs.postgresql
+            pkgs.heroku
+          ];
+        };
+      });
 }
