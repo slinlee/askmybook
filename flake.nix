@@ -10,7 +10,9 @@
       devShells.default = pkgs.mkShell {
         packages = [ 
          pkgs.bashInteractive
-
+         pkgs.python310Packages.pip
+         pkgs.postgresql
+         pkgs.heroku
         ];
       };
     });
