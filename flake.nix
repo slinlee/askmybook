@@ -14,6 +14,7 @@
             pkgs.python310Packages.pip
             pkgs.python310
             pkgs.python310Packages.venvShellHook
+            pkgs.python310Packages.black
             pkgs.autoPatchelfHook
             pkgs.postgresql
             pkgs.heroku
