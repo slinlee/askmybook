@@ -16,7 +16,6 @@ brew install postgresql
 
 See https://github.com/psycopg/psycopg2/issues/1200
 
-
 3. Turn your PDF into embeddings for GPT-3:
 
 ```
@@ -71,3 +70,5 @@ Note: macOS Monterey uses port 5000 (the default port) for AirPlay sharing, so y
 ```
 heroku local -p 5001
 ```
+
+The app will be available at `http://127.0.0.1:5001` (http://localhost:5001 will not work since 127.0.0.1 is the whitelisted address.)
