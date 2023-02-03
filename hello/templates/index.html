@@ -5,15 +5,13 @@
 
 <div class="header">
   <div class="logo">
-    <a href="https://www.amazon.com/Minimalist-Entrepreneur-Great-Founders-More/dp/0593192397">
       <img src="{% static 'book.png' %}" loading="lazy" />
-    </a>
-    <h1>Ask My Book</h1>
+    <h1>Ask Rivendell Reader</h1>
   </div>
 </div>
 
 <div class="main">
-  <p class="credits">This is an experiment in using AI to make my book's content more accessible. Ask a question and AI'll answer it in real-time:</p>
+  <p class="credits">This is an experiment in using AI to make Rivendell Reader's content more accessible. Ask a question and AI'll answer it in real-time:</p>
 
   <form action="/ask" method="post">
     {% csrf_token %}
@@ -124,7 +122,7 @@
 </script>
 
 <footer>
-  <p class="credits">Project by <a href="https://twitter.com/shl">Sahil Lavingia</a> • <a href="https://github.com/slavingia/askmybook">Fork on GitHub</a></a></p>
+  <p class="credits">Project by <a href="https://slinlee.com">Slin Lee</a> • <a href="https://github.com/slinlee/askmybook">Fork on GitHub</a></a></p>
 </footer>
 
 {% endblock %}
