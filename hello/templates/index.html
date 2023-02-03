@@ -19,7 +19,6 @@
 
     <div class="buttons" {% if answer %}style="display: none"{% endif %}>
       <button type="submit" id="ask-button">Ask question</button>
-      <button id="lucky-button" style="background: #eee; border-color: #eee; color: #444;" data>I'm feeling lucky</button>
     </div>
   </form>
 
@@ -51,11 +50,7 @@
       }
     }
 
-    $("#lucky-button").click(function(e) {
-      var options = ["What is a minimalist entrepreneur?", "What is your definition of community?", "How do I decide what kind of business I should start?"],
-          random = ~~(Math.random() * options.length);
 
-      $("textarea").val(options[random]);
     });
 
     $("textarea").bind('input propertychange', function(e) {
